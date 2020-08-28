@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+     {% csrf_token %}
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <br>
+
+    <label for="cylinder">Choose Cylinder:</label>
+
+    <select name="cylinder" id="cylinder">
+        <option value="Siddhartha">Siddhartha</option>
+        <option value="Butwal">Butwal</option>
+        <option value="Swastik">Swastik</option>
+        <option value="Lumbini">Lumbini</option>
+    </select>
+
+    <br>
+    <label for="qty">Quantity:</label><br>
+    <input type="text" id="qty" name="qty"><br>
+    <br>
+    <label for="Time">Time:</label>
+
+    <select name="Time" id="Time">
+        <option value="Emergency">Emergency</option>
+        <option value="By today 5pm">By today 5pm</option>
+        <option value="By tomorrow 5pm">By tomorrow 5pm</option>
+
+    </select>
+
+    <br>
+
+
+    <label for="sname">street or path name:</label><br>
+    <input type="text" id="sname" name="sname">
+    <br>
+
+    <button type="submit" class="btn btn-success">Order</button>
+
+</form>
+
+{% endblock %}
